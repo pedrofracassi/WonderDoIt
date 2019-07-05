@@ -180,15 +180,8 @@ const HouseHoldListItemsCreatedEventHandler = {
 				
 				//Split and loop over list
 				alexaTaskName.split(/ and | und | y | e | et /).forEach(function(entry) {
-					//Make first letter upper case
+                    //Make first letter upper case
                     var alexaSplitTaskName = stringExtensions.capitalize(entry);
-                    /* Removed due to new Amazon guideline.
-                    alexaListClient.deleteListItem(listId, listItem.id, consentToken)
-					.then((res) => {
-						console.log(`${listItem.value} was removed from Alexa list`);
-					}).catch((err) => {
-						console.log("Error when trying to remove item from Alexa list");
-					});*/
 
 					//Create task item
 					const graphTaskItem = {

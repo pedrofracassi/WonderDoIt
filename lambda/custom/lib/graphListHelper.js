@@ -191,6 +191,10 @@ async function getDuplicates(graphClient, outlookTask, outlookTaskFolder){
     return await getTasks(graphClient, duplicateFilter, outlookTaskFolder);
 }
 
+////////////////////////////////////////////////////////////////////////////////////////
+// Public interface
+////////////////////////////////////////////////////////////////////////////////////////
+
 /**
 * Adds an outlookTask to the given target list by name. If no shopping list exists, the
 * default list will be created (Alexa shopping list)
@@ -237,8 +241,20 @@ const addToDoItem = async (graphClient, outlookTask, consentToken) => {
     }
 };
 
+//TODO
+const getShoppingItems = async (graphClient, consentToken) => {
+
+};
+
+//TODO
+const getTodoItems = async (graphClient, consentToken) => {
+
+};
+
 module.exports = {
     addShoppingItem,
     addToDoItem,
-    addCustomTaskItem
-};
+    addCustomTaskItem,
+    getShoppingItems,
+    getTodoItems
+  };

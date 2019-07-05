@@ -1,4 +1,25 @@
- /**
+const removeItem = (listItem, listId, listClient, consentToken) => {
+    listClient.deleteListItem(listId, listItem.id, consentToken)
+    .then((res) => {
+        console.log(`${listItem.value} was removed from Alexa list`);
+    }).catch((err) => {
+        console.log("Error when trying to remove item from Alexa list");
+    });
+}
+
+//TODO
+const addItem = (listItem, listId, listClient, consentToken) => {
+}
+
+//TODO
+const updateItem = (listItem, listId, listClient, consentToken) => {
+}
+
+//TODO
+const getItems = (listId, listClient, consentToken) => {
+}
+
+/**
  * Fetches list item information for each listItem in listItemIds. Executes the
  * callback function with the response back from api.amazonalexa.com
  * for each item in the list.
@@ -39,7 +60,47 @@ const getListInfo = (listId, status, consentToken, listClient, callback) => {
   });
 };
 
+//TODO
+const getShoppingItems = (listClient, consentToken) => {
+    getItems(shoppingListId, listClient, consentToken)
+}
+
+//TODO
+const getTodoItems = (listClient, consentToken) => {
+    getItems(todoListId, listClient, consentToken)
+}
+
+//TODO
+const addShoppingItem = (listItem, listClient, consentToken) => {
+    addItem(listItem, shoppingListId, listClient, consentToken)
+}
+
+//TODO
+const updateShoppingItem = (listItem, listClient, consentToken) => {
+    updateItem(listItem, shoppingListId, listClient, consentToken)
+}
+
+//TODO
+const addTodoItem = (listItem, listClient, consentToken) => {
+    addItem(listItem, todoListId, listClient, consentToken)
+}
+
+//TODO
+const updateTodoItem = (listItem, listClient, consentToken) => {
+    updateItem(listItem, todoListId, listClient, consentToken)
+}
+
+
 module.exports = {
     traverseListItems, 
-    getListInfo
+    getListInfo,
+    //facade
+    getShoppingItems,
+    getToDoItems,
+    updateShoppingItem,
+    removeShoppingItem,
+    addShoppingItem,
+    updateTodoItem,
+    removeTodoItem,
+    addTodoItem
 };
