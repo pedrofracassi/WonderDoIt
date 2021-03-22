@@ -70,6 +70,20 @@ const translations = {
             SHOPPING_LIST: 'liste d\'achats'
         },
     },
+    'pt': {
+        translation: {
+            SKILL_NAME: 'Wonder Do It',
+            WELCOME_MESSAGE: 'Boas vindas ao Wonder Do It! Use a Alexa para adicionar novos itens às suas listas! Você pode dizer, "Alexa, coloca pão na minha lista de compras" or "Alexa, adiciona fazer compras na minha lista de afazeres".',
+            HELP_MESSAGE: 'Você pode dizer, "Alexa, coloca pão na minha lista de compras" or "Alexa, adiciona fazer compras na minha lista de afazeres".',
+            HELP_REPROMPT: 'Use a Alexa para adicionar novos itens às suas listas!',
+            STOP_MESSAGE: 'Até mais!',
+            PERMISSIONS_MISSING_CARD_TITLE: 'Wonder Do It - Permissões insuficientes',
+            PERMISSIONS_MISSING_MESSAGE: 'Para começar a usar essa skill, por favor use o aplicativo para aceitar as permissões necessárias de acesso à lista.',
+            ERROR_MESSAGE: 'Desculpe. Não foi possível processar seu pedido devido a problemas técnicos.',
+            LINK_ACCOUNT_MESSAGE: 'Para começar a usar essa skill, por favor use o app para autenticar com sua conta Amazon. Mais informações foram enviadas à sua página inicial da Alexa.',
+            SHOPPING_LIST: 'Lista de compras'
+        },
+    }
 };
 
 module.exports = translations;
